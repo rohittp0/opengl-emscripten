@@ -10,7 +10,9 @@ const detect = (data) => {
     gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels)
 
     const imageData = new Uint8ClampedArray(pixels)
-    const code = jsQR(imageData, width, height)
+
+    const code = false;
+    // const code = jsQR(imageData, width, height)
 
     if (code) {
         console.log("Found QR code", code);
